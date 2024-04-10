@@ -1,5 +1,5 @@
 import  { useState ,useEffect} from 'react'
-const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+const BASE_URL = import.meta.env.VITE_BACK_URL;
 const url = `${BASE_URL}api/`;
 
 const SearchList = ({ onSearchResultChange }) => {
