@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react'
 import './App.css'
-const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+const BASE_URL = import.meta.env.VITE_BACK_URL;
 const url = `${BASE_URL}api/`;
 import Lista from './components/lista/Lista';
 import Imprimir from './components/imprimir/Imprimir';
