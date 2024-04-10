@@ -4,10 +4,15 @@ import { useEffect, useState } from 'react'
 
 import './App.css'
 import Lista from './components/lista/Lista';
+import Imprimir from './components/imprimir/Imprimir';
+import SearchList from './components/search/Search';
 
 function App() {
   const server = "http://localhost:8080";
   const [users, setUsers] = useState({});
+  const [searchResult, setSearchResult] = useState([]);
+
+
 
   useEffect(()=>{
 
@@ -30,6 +35,10 @@ function App() {
 
   },[])
 
+  const handleSearchResultChange = (result) => {
+    setUsers(result);
+  };
+
   return (
     <>
      <div className='main__Tabla'>
@@ -37,6 +46,10 @@ function App() {
         <h2>Lista de Usuarios</h2>
 
      </div>
+     <hr />
+     <SearchList onSearchResultChange ={handleSearchResultChange}/>
+
+     <hr />
 
     <div className='Tabla_Users-tabla'>
       <table >
@@ -57,7 +70,7 @@ function App() {
             {
             (Array.isArray(users))
             ?(users.map((user,index) => {
-              return  <tr><Lista key={index} user={user}/></tr>;
+              return  <tr key ={index}><Lista key={index} user={user}/></tr>;
 
               })):
               console.log("La variable users no es un array.")
@@ -65,6 +78,10 @@ function App() {
       </tbody>
 
         </table>
+
+        </div>
+        <div className="Tabla_Imprimir">
+        <Imprimir/>
         </div>
 
     </div>

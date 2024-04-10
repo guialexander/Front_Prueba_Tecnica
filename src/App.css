@@ -55,3 +55,27 @@ th, td {
   border: 0.5px solid black;
 
 }
+
+#Tabla-btn {
+  bottom: 1vh;
+  right: 1vw;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 5%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-modal-color);
+}
+
+.Tabla_Imprimir{
+  display: flex;
+  justify-content: center;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Esto centrará verticalmente el input */
+}
