@@ -1,27 +1,23 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react'
-
 import './App.css'
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+const url = `${BASE_URL}api/`;
 import Lista from './components/lista/Lista';
 import Imprimir from './components/imprimir/Imprimir';
 import SearchList from './components/search/Search';
 import ListaPDF from './components/pdf/ListaPdf';
 
 function App() {
-  const server = "http://localhost:8080";
+
   const [users, setUsers] = useState({});
-
-
-
-
   useEffect(()=>{
-
-
     const fetchList = async () =>{
-      const url = `${server}/api/users`
+      const $url = `${url}users`
+      //console.log($url)
       try {
-        const response = await fetch(url)
+        const response = await fetch($url)
         const data = await response.json()
         //console.log(data)
         setUsers(data.users)
