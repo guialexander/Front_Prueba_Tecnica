@@ -1,0 +1,57 @@
+:root {
+  --main-font: sans-serif;
+  --font-size: 16px;
+  --main-color: blue;
+  --second-color: #222;
+  --main-modal-color: rgba(247, 222, 30, 0.85);
+  --second-modal-color: rgba(34, 34, 34, 0.85);
+  --container-width: 1200px;
+  --filter-found-color: #ffff;
+}
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.Tabla__users{
+
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--main-modal-color);
+  font-size: 1em;
+  height: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 4px ;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Tabla_users-tabla {
+  width: 98%;
+  overflow-y: scroll;
+
+}
+th, td {
+  width: 25%;
+  text-align: center;
+  vertical-align: center;
+  border: 0.5px solid black;
+
+}
