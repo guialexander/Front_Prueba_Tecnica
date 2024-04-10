@@ -15,7 +15,7 @@ function App() {
   useEffect(()=>{
     const fetchList = async () =>{
       const $url = `${url}users`
-      //console.log($url)
+      console.log($url)
       try {
         const response = await fetch($url)
         const data = await response.json()
