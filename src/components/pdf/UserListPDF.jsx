@@ -58,9 +58,10 @@ const UserListPDF = ({ users }) => (
             <Text style={styles.tableCell}>Apellido</Text>
             <Text style={styles.tableCell}>Email:</Text>
           </View>
+          {console.log(users)}
           {(Array.isArray(users))
             ?(users.map((user,index) => {
-                <View key ={index} style={styles.tableRow}>
+                return <View key={index} style={styles.tableRow}>
                 <Text style={styles.tableCell}>{user._id}</Text>
                 <Text style={styles.tableCell}>{user.name}</Text>
                 <Text style={styles.tableCell}>{user.lastName}</Text>
