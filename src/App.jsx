@@ -2,8 +2,8 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react'
 import './App.css'
-const BASE_URL = import.meta.env.VITE_BACK_URL;
-const url = `${BASE_URL}api/`;
+//const BASE_URL = import.meta.env.VITE_BACK_URL;
+const url = `https://backpruebatecnica.onrender.com/api/`;
 import Lista from './components/lista/Lista';
 import Imprimir from './components/imprimir/Imprimir';
 import SearchList from './components/search/Search';

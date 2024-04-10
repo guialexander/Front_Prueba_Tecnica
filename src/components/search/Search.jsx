@@ -1,6 +1,6 @@
 import  { useState ,useEffect} from 'react'
-const BASE_URL = import.meta.env.VITE_BACK_URL;
-const url = `${BASE_URL}api/`;
+//const BASE_URL = import.meta.env.VITE_BACK_URL;
+const url = `https://backpruebatecnica.onrender.com/api/`;
 
 const SearchList = ({ onSearchResultChange }) => {
     const [search,setSearch]=useState(null)
