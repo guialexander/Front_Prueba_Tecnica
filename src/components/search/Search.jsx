@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from 'react'
+import  { useState ,useEffect} from 'react'
 
 const SearchList = ({ onSearchResultChange }) => {
     const [search,setSearch]=useState(null)
@@ -19,6 +19,7 @@ const SearchList = ({ onSearchResultChange }) => {
 
         } catch (error) {
           console.log(error)
+
         }
 
       };
@@ -27,10 +28,10 @@ const SearchList = ({ onSearchResultChange }) => {
 
     },[onSearchResultChange])
     const handleKeyUp = (event) => {
-        console.log(event)
+        //console.log(event)
         if (event.key === "Escape") {
             result = users;
-            console.log(result)
+            //console.log(result)
             }
         let {value} = event.target;
         setSearch(value)

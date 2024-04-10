@@ -6,11 +6,12 @@ import './App.css'
 import Lista from './components/lista/Lista';
 import Imprimir from './components/imprimir/Imprimir';
 import SearchList from './components/search/Search';
+import ListaPDF from './components/pdf/ListaPdf';
 
 function App() {
   const server = "http://localhost:8080";
   const [users, setUsers] = useState({});
-  const [searchResult, setSearchResult] = useState([]);
+
 
 
 
@@ -81,6 +82,7 @@ function App() {
 
         </div>
         <div className="Tabla_Imprimir">
+        <ListaPDF users = {users}/>
         <Imprimir/>
         </div>
 
