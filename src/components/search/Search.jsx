@@ -1,18 +1,16 @@
 import  { useState ,useEffect} from 'react'
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
+const url = `${BASE_URL}api/`;
 
 const SearchList = ({ onSearchResultChange }) => {
     const [search,setSearch]=useState(null)
-    const server = "http://localhost:8080";
     const [users, setUsers] = useState({});
     let result="";
-
     useEffect(()=>{
-
-
       const fetchList = async () =>{
-        const url = `${server}/api/users`
+        const $url = `${url}users`
         try {
-          const response = await fetch(url)
+          const response = await fetch($url)
           const data = await response.json()
           //console.log(data)
           setUsers(data.users)
